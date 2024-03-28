@@ -54,6 +54,6 @@ int _printf(const char *format, ...)
     }
     va_end(lol);
     
-    return (i);
+    return (write_length);
     
 }
