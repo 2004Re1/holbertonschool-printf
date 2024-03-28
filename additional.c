@@ -5,6 +5,7 @@
 #include "main.h"
 /**
  * _putchar - is function.
+ *@c: is variable.
  */
 
 extern unsigned int write_length;
