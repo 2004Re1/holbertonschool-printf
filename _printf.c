@@ -5,13 +5,13 @@
 extern unsigned int write_length;
 int _printf(const char *format, ...)
 {
-    
+    int i;
+    int len;
     char* hold;
     char s;
     va_list lol;
     va_start(lol, format);
-    int i;
-    int len;
+
     
     for(i = 0,len = 0; format[i] != '\0' ; i++)
     {
