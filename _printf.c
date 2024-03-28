@@ -3,6 +3,9 @@
 #include <stdarg.h>
 #include "main.h"
 extern unsigned int write_length;
+/**
+ *_printf - is.
+ */
 int _printf(const char *format, ...)
 {
     int i;
