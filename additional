@@ -4,6 +4,7 @@
 #include <limits.h>
 #include "main.h"
 
+extern unsigned int write_length;
 int  _putchar(char c) 
 {
 	return(write(1, &c, 1));
