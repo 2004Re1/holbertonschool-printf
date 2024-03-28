@@ -14,8 +14,11 @@ int  _putchar(char c)
 void _puts(char *str)
 {
 	int i;
-
-	for (i = 0; str[i] != 0; i++)
+	if (str == 0)
+	{
+		_puts("(null)");	
+	}
+		for (i = 0; str[i] != 0; i++)
 	{
 		_putchar(str[i]);
 	}
