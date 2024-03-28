@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
     int i;
     int len;
     
-    for(i = 0 len = 0; format[i] != '\0' ; i++)
+    for(i = 0,len = 0; format[i] != '\0' ; i++)
     {
     if(format[i] != '%')
     {
