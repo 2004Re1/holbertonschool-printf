@@ -7,6 +7,7 @@
 extern unsigned int write_length;
 int  _putchar(char c) 
 {
+	write_length++;
 	return(write(1, &c, 1));
 }
 
