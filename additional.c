@@ -14,7 +14,10 @@ int  _putchar(char c)
 	write_length++;
 	return(write(1, &c, 1));
 }
-
+/**
+ *_puts - is func.
+ *@str: is string
+ */
 void _puts(char *str)
 {
 	int i;
