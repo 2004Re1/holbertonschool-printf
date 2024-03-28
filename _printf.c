@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
     {
         _putchar(format[i]);
         continue;
-        len++;
+   
     }   
     
     else if (format[i+1] == 's')
@@ -55,6 +55,6 @@ int _printf(const char *format, ...)
     }
     va_end(lol);
     
-    return (len);
+    return (0);
     
 }
