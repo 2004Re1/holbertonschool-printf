@@ -16,7 +16,8 @@ void _puts(char *str)
 	int i;
 	if (str == 0)
 	{
-		_puts("(null)");	
+		_puts("(null)");
+		return;
 	}
 		for (i = 0; str[i] != 0; i++)
 	{
