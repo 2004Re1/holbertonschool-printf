@@ -5,6 +5,8 @@
 extern unsigned int write_length;
 /**
  *_printf - is.
+ *@format: is string.
+ *@...:is numbers variables.
  */
 int _printf(const char *format, ...)
 {
