@@ -3,6 +3,9 @@
 #include <unistd.h>
 #include <limits.h>
 #include "main.h"
+/**
+ * _putchar - is function.
+ */
 
 extern unsigned int write_length;
 int  _putchar(char c) 
