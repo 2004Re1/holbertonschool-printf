@@ -48,11 +48,19 @@ int _printf(const char *format, ...)
     
     else if(format[i] == '%' && format[i+1] == '\0')
     {
+        char c;
+	    c = format[++i];
+	    if (c == 0)
+	        goto END_ZONE;
         i++;
     }
     
     }
     va_end(lol);
+    END_ZONE:
+    if (write_length == 0) {
+        return -1;
+    }
     
     return (write_length);
     
