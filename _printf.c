@@ -6,7 +6,6 @@ extern unsigned int write_length;
 int _printf(const char *format, ...)
 {
     int i;
-    int len;
     char* hold;
     char s;
     va_list lol;
