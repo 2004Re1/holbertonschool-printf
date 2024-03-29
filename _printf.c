@@ -47,13 +47,13 @@ int _printf(const char *format, ...)
 
 	if (current == '%')
 	{
-		char c;
+		char flag;
 
-		c = format[++i];
-		if (c == 0)
+		flag = format[++i];
+		if (flag == 0)
 			goto EDGE;
 
-		checker(c, &lol, &counter_org);
+		checker(flag, &lol, &counter_org);
 		continue;
 	}
 
