@@ -59,7 +59,7 @@ int _printf(const char *format, ...)
 
     va_list lol;
     va_start(lol, format);
-    checker(format,&lol,&counter)
+    checker(format,&lol,&counter_org);
     
 
     va_end(lol);
