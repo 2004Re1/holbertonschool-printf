@@ -56,7 +56,7 @@ void checker (const char *format,va_list *lol, int *counter)
     }
     END_ZONE:
     if ((*counter) == 0) {
-        return -1;
+        return;
     }
 }
 
