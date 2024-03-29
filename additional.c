@@ -34,43 +34,47 @@ void _puts(char *str)
 
 void _printnum(int x)
 {
-    int len = 0;
     int temp;
     int i;
-	    char *p;
-	
-	    int isNegative = 0;
-	    if (x < 0) {
-	        isNegative = 1;
-	        x = -x;
-	        len++;
-	    }
-	
-	    temp = x;
-	    do {
-	        len++;
-	        temp /= 10;
-	    } while (temp != 0);
-	
-	  
-	    p = (char*)malloc((len + 1) * sizeof(char)); 
-	
-	
-	    i = len - 1;
-	    do {
-	        p[i--] = (x % 10) + '0';
-	        x /= 10;
-	    } while (x != 0);
-	
-	
-	    if (isNegative)
-	        p[0] = '-';
-	
-	
-	    p[len] = '\0';
-	
-	    _puts(p);
-	    free(p);
+    int len = 0;
+    char *p;
     
+    int isNegative = 0;
+    if (x < 0) {
+        isNegative = 1;
+        len++;
+        if (x != INT_MIN)
+        {
+            x = -x;
+            
+        }
+    }
+    temp = x;
+    do {
+        len++;
+        temp /= 10;
+    } while (temp != 0);
+    p = (char*)malloc((len + 1) * sizeof(char)); 
+    i = len - 1;
+    if (x == INT_MIN)
+    {
+        p[i--] = '8';
+        x = -(x /10);
+        do {
+            p[i--] = (x % 10) + '0';
+            x /= 10;
+        } while (x != 0);
+    }
+    do {
+        p[i--] = (x % 10) + '0';
+        x /= 10;
+    } while (x != 0);
+   
+    if (isNegative) {
+        p[0] = '-';
+    }
+    p[len] = '\0';
+    _puts(p);
+    free(p);
 }
 
