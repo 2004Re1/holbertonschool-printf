@@ -59,26 +59,7 @@ int _printf(const char *format, ...)
 
     va_list lol;
     va_start(lol, format);
-
-	for (i = 0; format[i] != 0; i++)
-	{
-	char current = format[i];
-
-	if (current == '%')
-	{
-		char c;
-
-		c = format[++i];
-		if (c == 0)
-			goto END_ZONE;
-		continue;
-	}
-END_ZONE:
-	if (write_length == 0)
-	{
-		return (-1);
-	}
-	return (write_length);
+    checker(format,&lol,&counter)
     
 
     va_end(lol);
