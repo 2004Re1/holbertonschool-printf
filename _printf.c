@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
         _puts(hold);
     }
     
-    else if(format[i+1] == 'c')
+    else if(format[i+1] == 'c'||format[i+1] == 'i'||format[i+1] == 'd')
     {
         i++;
         s = (char) va_arg(lol, int);
