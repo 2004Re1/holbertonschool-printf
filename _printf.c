@@ -4,64 +4,68 @@
 #include "main.h"
 
 /**
- *_printf - is.
+ * checker - is.
  *@format: is string.
  *@...:is numbers variables.
  */
-void checker (const char *format,va_list *lol, int *counter)
+void checker (char flag, va_list *lol, int *counter)
 {
-    int i;
-    int list;
-    for(i = 0 ; format[i] != '\0' ; i++)
+      
+    if (flag == 'd' || flag == 'i')
     {
-    if(format[i] != '%')
-    {
-        _putchar(format[i],counter);
-        continue;
+        _printnum(va_arg(*lol, int),counter);
     }
-    else if (format[i+1] == 'd' || format[i+1] == 'i')
+    else if (flag == 's')
     {
-        i++;
-        list = va_arg(*lol, int);
-        _printnum(list,counter);
-    }
-    else if (format[i+1] == 's')
-    {
-        i++;
         _puts(va_arg(*lol,char*),counter);
     }
-    else if(format[i+1] == 'c')
+    else if(flag == 'c')
     {
-        i++;
         _putchar((char)va_arg(*lol, int),counter);
     }
-    else if(format[i+1] == '%')
+    else
     {
-        i++;
-        _putchar('%',counter);
-    }
-    else if(format[i] == '%' && format[i+1] != '\0')
-    {
-        _putchar('%',counter);
-    }
-    else if(format[i] == '%' && format[i+1] == '\0')
-    {
-        i++;
-    }
+        if (flag != '%')
+			_putchar('%', counter);
+		_putchar(flag, counter);
     }
 }
 
 
 int _printf(const char *format, ...)
 {
-    int counter_org;
-   
+	int i;
+	int counter_org;
+	va_list lol;
 
-    va_list lol;
-    va_start(lol, format);
-    checker(format,&lol,&counter_org);
-    
+	va_start(lol, format);
+	counter_org = 0;
 
-    va_end(lol);
-    return (counter_org);
+	for (i = 0; format[i] != 0; i++)
+	{
+	char current = format[i];
+
+	if (current == '%')
+	{
+		char c;
+
+		c = format[++i];
+		if (c == 0)
+			goto EDGE;
+
+		checker(c, &lol, &counter_org);
+		continue;
+	}
+
+		_putchar(current, &counter_org);
+	}
+
+	va_end(lol);
+
+EDGE:
+	if (counter_org == 0)
+	{
+		return (-1);
+	}
+	return (counter_org);
 }
