@@ -11,6 +11,7 @@ extern unsigned int write_length;
 int _printf(const char *format, ...)
 {
     int i;
+    int list;
     char* hold;
     char s;
     va_list lol;
