@@ -36,6 +36,7 @@ void _printnum(int x)
 {
     int len = 0;
     int temp;
+    int i;
 	    char *p;
 	
 	    int isNegative = 0;
@@ -55,7 +56,7 @@ void _printnum(int x)
 	    p = (char*)malloc((len + 1) * sizeof(char)); 
 	
 	
-	    int i = len - 1;
+	    i = len - 1;
 	    do {
 	        p[i--] = (x % 10) + '0';
 	        x /= 10;
