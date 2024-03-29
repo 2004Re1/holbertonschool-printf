@@ -57,7 +57,7 @@ void _printnum(int x)
     p = (char*)malloc((len + 1) * sizeof(char)); 
     if(p == NULL)
     {
-	    return (NULL);
+	    return;
     }
     i = len - 1;
     if (x == INT_MIN)
