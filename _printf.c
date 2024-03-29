@@ -39,7 +39,14 @@ int _printf(const char *format, ...)
         s = (char) va_arg(lol, int);
         _putchar(s);
     }
-    
+    else if(format[i+1] == 'd')
+    {
+        i++;
+        s = (char) va_arg(lol, int);
+        _putchar(s);
+        _putchar(s);
+        
+    }
     else if(format[i+1] == '%')
     {
         i++;
