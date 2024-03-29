@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
     else if(format[i+1] == 'd')
     {
         i++;
-        s = (char) va_arg(lol, int);
+        s = va_arg(lol, int);
         _putchar(s);
         _putchar(s);
         
