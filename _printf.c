@@ -12,8 +12,6 @@ void checker (const char *format,va_list *lol, int *counter)
 {
     int i;
     int list;
-    char* hold;
-    char s;
     for(i = 0 ; format[i] != '\0' ; i++)
     {
     if(format[i] != '%')
