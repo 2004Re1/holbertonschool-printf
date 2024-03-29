@@ -35,6 +35,7 @@ void _puts(char *str)
 void _printnum(int x)
 {
     int len = 0;
+    int temp;
 	    char *p;
 	
 	    int isNegative = 0;
@@ -44,14 +45,14 @@ void _printnum(int x)
 	        len++;
 	    }
 	
-	    int temp = x;
+	    temp = x;
 	    do {
 	        len++;
 	        temp /= 10;
 	    } while (temp != 0);
 	
 	  
-	    p = (char*)malloc((len + 1) * sizeof(char)); // +1 for null terminator
+	    p = (char*)malloc((len + 1) * sizeof(char)); 
 	
 	
 	    int i = len - 1;
