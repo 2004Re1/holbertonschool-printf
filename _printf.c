@@ -44,19 +44,10 @@ void checker (const char *format,va_list *lol, int *counter)
     {
         _putchar('%',counter);
     }
-    
     else if(format[i] == '%' && format[i+1] == '\0')
     {
-        char c;
-	    c = format[++i];
-	    if (c == 0)
-	        goto END_ZONE;
         i++;
     }
-    }
-    END_ZONE:
-    if ((*counter) == 0) {
-        return;
     }
 }
 
@@ -68,7 +59,27 @@ int _printf(const char *format, ...)
 
     va_list lol;
     va_start(lol, format);
-    checker(format,&lol,&counter_org);
+
+	for (i = 0; format[i] != 0; i++)
+	{
+	char current = format[i];
+
+	if (current == '%')
+	{
+		char c;
+
+		c = format[++i];
+		if (c == 0)
+			goto END_ZONE;
+		continue;
+	}
+END_ZONE:
+	if (write_length == 0)
+	{
+		return (-1);
+	}
+	return (write_length);
+    
 
     va_end(lol);
     return (counter_org);
