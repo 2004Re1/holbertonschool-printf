@@ -43,8 +43,9 @@ int _printf(const char *format, ...)
     {
         i++;
         s = va_arg(lol, int);
-        _putchar(s);
-        _putchar(s);
+	s = s + '0';
+        _puts(s);
+        _puts(s);
         
     }
     else if(format[i+1] == '%')
