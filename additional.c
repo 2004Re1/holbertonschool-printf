@@ -33,6 +33,8 @@ void _puts(char *str,int *counter)
 
 void _printnum(int x,int *counter)
 {
+    int temp;
+    int i;
     int len = 0;
     char *p;
     int isNegative = 0;
@@ -44,13 +46,13 @@ void _printnum(int x,int *counter)
             x = -x;
         }
     }
-    int temp = x;
+    temp = x;
     do {
         len++;
         temp /= 10;
     } while (temp != 0);
     p = (char*)malloc((len + 1) * sizeof(char)); 
-    int i = len - 1;
+    i = len - 1;
     if (x == INT_MIN)
     {
         p[i--] = '8';
