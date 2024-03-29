@@ -25,6 +25,13 @@ int _printf(const char *format, ...)
         continue;
    
     }
+
+    else if (format[i+1] == 'd' || format[i+1] == 'i')
+    {
+        i++;
+        list = va_arg(lol, int);
+        _printnum(list);
+    }
     
     else if (format[i+1] == 's')
     {
