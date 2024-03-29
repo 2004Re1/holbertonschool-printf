@@ -47,8 +47,16 @@ void checker (const char *format,va_list *lol, int *counter)
     
     else if(format[i] == '%' && format[i+1] == '\0')
     {
+        char c;
+	    c = format[++i];
+	    if (c == 0)
+	        goto END_ZONE;
         i++;
     }
+    }
+    END_ZONE:
+    if ((*counter) == 0) {
+        return -1;
     }
 }
 
