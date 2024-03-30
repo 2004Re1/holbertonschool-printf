@@ -23,7 +23,7 @@ void _puts(char *str, int *counter)
 
 	if (str == 0)
 	{
-		_puts("(null)",counter);
+		_puts("(null)", counter);
 		return;
 	}
 		for (i = 0; str[i] != 0; i++)
