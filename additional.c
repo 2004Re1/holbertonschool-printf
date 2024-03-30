@@ -50,7 +50,7 @@ void Negative_check(int *x, int *isNegative, int *len)
 		(*len)++;
 		if (*x != INT_MIN)
 		{
-            *x = -(*x);
+			*x = -(*x);
         }
     }
 }
