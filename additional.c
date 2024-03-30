@@ -48,8 +48,8 @@ void Negative_check(int *x, int *isNegative, int *len)
 	{
 		*isNegative = 1;
 		(*len)++;
-        if (*x != INT_MIN)
-        {
+		if (*x != INT_MIN)
+		{
             *x = -(*x);
         }
     }
