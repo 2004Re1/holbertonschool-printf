@@ -52,7 +52,7 @@ void Negative_check(int *x, int *isNegative, int *len)
 		{
 			*x = -(*x);
 		}
-    }
+	}
 }
 
 void _printnum(int x, int *counter)
