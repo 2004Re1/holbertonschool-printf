@@ -59,7 +59,7 @@ void _printnum(int x, int *counter)
 {
 	int i;
 	int len = 0;
-    char *p;
+	char *p;
     int isNegative = 0;
     Negative_check(&x,&isNegative,&len);
     _number_len(x,&len);
