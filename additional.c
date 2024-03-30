@@ -34,7 +34,7 @@ void _puts(char *str, int *counter)
 
 void _number_len(int x, int *len)
 {
-    int temp;
+	int temp;
     temp = x;
     do {
         (*len)++;
