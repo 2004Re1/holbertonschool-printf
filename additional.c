@@ -39,7 +39,7 @@ void _number_len(int x, int *len)
 	do {
 		(*len)++;
 		temp /= 10;
-    } while (temp != 0);
+	} while (temp != 0);
 }
 
 void Negative_check(int *x,int *isNegative, int *len)
