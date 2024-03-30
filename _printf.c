@@ -8,27 +8,26 @@
  *@format: is string.
  *@...:is numbers variables.
  */
-void checker (char flag, va_list *lol, int *counter)
+void checker(char flag, va_list *lol, int *counter)
 {
-      
-    if (flag == 'd' || flag == 'i')
-    {
-        _printnum(va_arg(*lol, int),counter);
-    }
-    else if (flag == 's')
-    {
-        _puts(va_arg(*lol,char*),counter);
-    }
-    else if(flag == 'c')
-    {
-        _putchar((char)va_arg(*lol, int),counter);
-    }
-    else
-    {
-        if (flag != '%')
-			_putchar('%', counter);
+	if (flag == 'd' || flag == 'i')
+	{
+		_printnum(va_arg(*lol, int), counter);
+	}
+	else if (flag == 's')
+	{
+	_puts(va_arg(*lol, char*), counter);
+	}
+	else if (flag == 'c')
+	{
+	_putchar((char)va_arg(*lol, int), counter);
+	}
+	else
+	{
+	if (flag != '%')
+		_putchar('%', counter);
 		_putchar(flag, counter);
-    }
+	}
 }
 
 
@@ -50,9 +49,9 @@ int _printf(const char *format, ...)
 		char flag;
 
 		flag = format[++i];
+
 		if (flag == 0)
 			goto EDGE;
-
 		checker(flag, &lol, &counter_org);
 		continue;
 	}
