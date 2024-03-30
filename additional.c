@@ -42,7 +42,7 @@ void _number_len(int x, int *len)
 	} while (temp != 0);
 }
 
-void Negative_check(int *x,int *isNegative, int *len)
+void Negative_check(int *x, int *isNegative, int *len)
 {
      if (*x < 0) {
         *isNegative = 1;
