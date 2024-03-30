@@ -24,8 +24,8 @@ void checker(char flag, va_list *lol, int *counter)
 	}
 	else
 	{
-	if (flag != '%')
-		_putchar('%', counter);
+		if (flag != '%')
+			_putchar('%', counter);
 		_putchar(flag, counter);
 	}
 }
