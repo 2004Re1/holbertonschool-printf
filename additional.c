@@ -11,7 +11,7 @@
 int  _putchar(char c, int *counter)
 {
 	(*counter)++;
-	return(write(1, &c, 1));
+	return (write(1, &c, 1));
 }
 /**
  *_puts - is func.
