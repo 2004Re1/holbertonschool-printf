@@ -44,8 +44,9 @@ void _number_len(int x, int *len)
 
 void Negative_check(int *x, int *isNegative, int *len)
 {
-	if (*x < 0) {
-        *isNegative = 1;
+	if (*x < 0) 
+	{
+		*isNegative = 1;
         (*len)++;
         if (*x != INT_MIN)
         {
