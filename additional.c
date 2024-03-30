@@ -20,6 +20,7 @@ int  _putchar(char c, int *counter)
 void _puts(char *str, int *counter)
 {
 	int i;
+
 	if (str == 0)
 	{
 		_puts("(null)",counter);
