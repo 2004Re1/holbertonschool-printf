@@ -4,10 +4,10 @@
 #include "main.h"
 
 /**
- * checker - is.
- *@flag: is char.
+ * checker - is function that checks flags.
+ *@flag: is char contains flag.
  *@lol: variagr variables.
- *.
+ *@counter:pointer for count of words.
  */
 void checker(char flag, va_list *lol, int *counter)
 {
@@ -31,7 +31,11 @@ void checker(char flag, va_list *lol, int *counter)
 	}
 }
 
-
+/**
+ * _printf - Writes the formatted string to stdout.
+ * @format: String that contains the text to be written to stdout.
+ * Return: If successful, the total number of characters written is returned.
+ */
 int _printf(const char *format, ...)
 {
 	int i;
