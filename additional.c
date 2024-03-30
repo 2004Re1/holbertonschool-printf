@@ -37,7 +37,7 @@ void _number_len(int x, int *len)
 	int temp;
 	temp = x;
 	do {
-        (*len)++;
+		(*len)++;
         temp /= 10;
     } while (temp != 0);
 }
