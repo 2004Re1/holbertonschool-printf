@@ -65,7 +65,7 @@ void _printnum(int x, int *counter)
 	_number_len(x,&len);
 	p = (char*)malloc((len + 1) * sizeof(char));
 	if (p == NULL)
-    {
+	{
         return;
     }
     i = len - 1;
