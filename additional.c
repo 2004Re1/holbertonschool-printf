@@ -28,7 +28,7 @@ void _puts(char *str, int *counter)
 	}
 		for (i = 0; str[i] != 0; i++)
 	{
-		_putchar(str[i],counter);
+		_putchar(str[i], counter);
 	}
 }
 
