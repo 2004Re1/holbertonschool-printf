@@ -55,11 +55,11 @@ void _number_len(int x, int *len)
 		temp /= 10;
 	} while (temp != 0);
 }
-/*
- * Negative_check - is func.
- * @x: is var.
- * @isNegative: is check.
- * @len: is len.
+/**
+ *Negative_check - is func.
+ *@x: is var.
+ *@isNegative: is check.
+ *@len: is len.
  */
 void Negative_check(int *x, int *isNegative, int *len)
 {
@@ -73,10 +73,10 @@ void Negative_check(int *x, int *isNegative, int *len)
 		}
 	}
 }
-/*
- * _printnum - is func.
- * @x: is var.
- * @counter: is turn value.
+/**
+ *_printnum - is func.
+ *@x: is var.
+ *@counter: is turn value.
  */
 void _printnum(int x, int *counter)
 {
