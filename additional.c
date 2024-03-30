@@ -32,7 +32,7 @@ void _puts(char *str, int *counter)
 	}
 }
 
-void _number_len(int x,int *len)
+void _number_len(int x, int *len)
 {
     int temp;
     temp = x;
