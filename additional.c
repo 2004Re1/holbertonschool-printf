@@ -8,7 +8,7 @@
  *@c: is variable.
  */
 
-int  _putchar(char c, int *counter) 
+int  _putchar(char c, int *counter)
 {
     (*counter)++;
 	return(write(1, &c, 1));
