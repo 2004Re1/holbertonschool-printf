@@ -17,7 +17,7 @@ int  _putchar(char c, int *counter)
  *_puts - is func.
  *@str: is string
  */
-void _puts(char *str,int *counter)
+void _puts(char *str, int *counter)
 {
 	int i;
 	if (str == 0)
