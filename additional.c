@@ -63,7 +63,7 @@ void _printnum(int x, int *counter)
 	int isNegative = 0;
 	Negative_check(&x,&isNegative,&len);
 	_number_len(x,&len);
-    p = (char*)malloc((len + 1) * sizeof(char));
+	p = (char*)malloc((len + 1) * sizeof(char));
     if (p == NULL)
     {
         return;
