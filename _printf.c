@@ -5,8 +5,9 @@
 
 /**
  * checker - is.
- *@format: is string.
- *@...:is numbers variables.
+ *@flag: is char.
+ *@lol: variagr variables.
+ *.
  */
 void checker(char flag, va_list *lol, int *counter)
 {
